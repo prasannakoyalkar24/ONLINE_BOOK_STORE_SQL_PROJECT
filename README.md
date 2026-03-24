@@ -1,10 +1,10 @@
-# Onine Book Store SQL Project
+# Online Book Store SQL Project
 
 **Project Title**: Onine Book Store  
 **Database**: `Online_book_store`
 
 ## Project Overview
-The aim is to analyze the online bookstore dataset using SQL to uncover insights about book sales, customer behavior, and revenue trends. The goal is to perform data exploration, identify popular books and genres, and generate meaningful insights that can help improve sales and business decisions.
+The aim is to analyze the online bookstore dataset using SQL to uncover insights about book sales, customer behaviour, and revenue trends. The goal is to perform data exploration, identify popular books and genres, and generate meaningful insights that can help improve sales and business decisions.
 
 ## Objectives
 
@@ -59,7 +59,7 @@ create table Orders (
 ### 2. CRUD Operations
 
 - **Create**: Inserted sample records into the `books` table.
-- **Read**: Retrieved and displayed data from various tables.
+- **Read**:   Retrieved and displayed data from various tables.
 - **Update**: Updated records in the `Customers` table.
 - **Delete**: Removed records from the `orders` table as needed.
 
@@ -136,6 +136,7 @@ LIMIT 10;
 ```
 
 Task 11. **Calculate the total revenue generated from all orders**:
+
 ```sql
 SELECT SUM(total_amount) FROM orders;
 ```
@@ -177,7 +178,6 @@ ON b.book_id = o.book_id
 GROUP BY b.book_id , b.title
 ORDER BY 3 DESC
 LIMIT 1;
-
 ```
 
 **Task 16: Show the top 3 most expensive books of 'Fantasy' Genre**  
@@ -205,9 +205,8 @@ FROM orders as o
 JOIN customers as c
 ON o.customer_id = c.customer_id
 WHERE o.total_amount > 30;
-
-
 ```
+
 **Task 19: Find the customer who spent the most on orders**
 ```sql
 SELECT c.customer_id , c.name , SUM(o.total_amount) as total_spent
@@ -218,8 +217,6 @@ GROUP BY 1, 2
 ORDER BY 3 desc
 LIMIT 1;
 ```
-
-
 
 **Task 20: Calculate the stock remaining after fulfilling all orders**
 ```sql
